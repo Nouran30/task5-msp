@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--backgroundColor);
+}
+
+:root {
+    --mainColor: #1f43c3;
+    --carteColor: #1bc54b;
+    --redColor: #da382d;
+    --backgroundColor: #e7ebf1;
+}
+
+.container {
+    background-color: var(--backgroundColor);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 80px auto;
+    grid-template-areas: "nav nav nav nav nav nav " "aside main main main main main ";
+    row-gap: 25px;
+
+}
+
+nav {
+    background-color: var(--mainColor);
+    grid-area: nav;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    padding: 10px;
+
+}
+
+aside {
+    background-color: var(--backgroundColor);
+    grid-area: aside;
+}
+
+main {
+    background-color: var(--backgroundColor);
+    grid-area: main;
+}
+
+.check_box {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    width: 150px;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price>p {
+    font-size: 13px;
+}
+
+#range {
+    width: 100%;
+}
+
+.aside_container {
+    background-color: white;
+    width: 180px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 30px;
+    box-shadow: 0 0 10px 0;
+}
+
+.product {
+    background-color: white;
+    margin: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(2, auto);
+    gap: 25px;
+}
+
+.products2 {
+
+    grid-column: span 2;
+}
+
+.image>img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+.image::after {
+    content: "25$";
+    background-color: var(--carteColor);
+    color: white;
+    padding: 3px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5) insert;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+
+.image {
+    position: relative;
+}
+
+.products2 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto;
+    column-gap: 10px;
+}
+
+button {
+    width: 100%;
+    margin: 3px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+
+}
+
+.green_b {
+    background-color: var(--carteColor);
+}
+
+.blue_b {
+    background-color: var(--mainColor);
+}
+
+.product2_details p {
+    font-size: 10px;
+}
+
+.product2_details h3 span {
+    color: var(--redColor);
+}
+
+.product2_details {
+    position: relative;
+}
+
+.product2_details::after {
+    content: "sugessted for you";
+    background-color: var(--redColor);
+    color: white;
+    padding: 3px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5) insert;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+
+.products2 img {
+    height: 100%;
+    position: relative;
+    left: -10px;
+    width: 300px;
+}
+
+.products2 .image {
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+.data p {
+    color: rgba(0, 0, 0, 0.285);
+}
